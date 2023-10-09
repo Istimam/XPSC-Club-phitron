@@ -1,6 +1,15 @@
-B C E F G J 
+B 
+C 
+E 
+F 
+G 
+H 
+I 
+J 
+K 
+P 
+N 
+O 
+V
 
 Support
-1-H- A.Almost Prime is it possible to implement in my way
-2-G- TLE?
-3-week 1 - S-era - Still confuse and is there only one way to solve this pb?
