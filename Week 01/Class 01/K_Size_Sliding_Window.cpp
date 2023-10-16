@@ -12,19 +12,19 @@ int main()
     }
     int k;
     cin >> k;
+    int i = 0, sum = 0, j = 0;
     int mx = INT_MIN;
-
-    /*Brute Force which can lead to TLE*/
-
-    For(i,0,n-k+1) /*O(n-k)   if n=10^5*/
+    
+    while (j<n)
     {
-        int s = 0;
-        For(j,i,i+k) /*O(k)  if n=10^5*/
+        sum += ar[j];
+        if(j >= k-1)
         {
-            s += ar[j];
+            mx = max(mx, sum);
+            sum -= ar[i];
+            i++;
         }
-        mx = max(s, mx);
-        // cout<<s<<'\n';
+        j++;
     }
     cout << mx;
     return 0;
