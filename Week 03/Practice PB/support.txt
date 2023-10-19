@@ -1,0 +1,6 @@
+O-Remove Two Lettes
+    *Map or Set gives TLE .Didn't understand the given code logic
+H-Premutation
+    Understand the logic but how to Approach?
+B-Matrix Rotation 
+    Didn't understand this two lines

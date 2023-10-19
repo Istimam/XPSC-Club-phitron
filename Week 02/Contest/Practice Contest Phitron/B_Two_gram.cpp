@@ -1,28 +1,24 @@
-#include <iostream>
-#include <string>
-#include <unordered_map>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
+int main() 
+{
     int n;
     cin >> n;
     string s;
     cin >> s;
-
     unordered_map<string, int> twoGramFreq;
     int maxFreq = 0;
     string maxTwoGram;
-
-    for (int i = 0; i < n - 1; ++i) {
+    for (int i = 0; i < n - 1; ++i) 
+    {
         string twoGram = s.substr(i, 2);
         twoGramFreq[twoGram]++;
-
-        if (twoGramFreq[twoGram] > maxFreq) {
+        if (twoGramFreq[twoGram] > maxFreq) 
+        {
             maxFreq = twoGramFreq[twoGram];
             maxTwoGram = twoGram;
         }
     }
-
-    cout << maxTwoGram << endl;
+    cout << maxTwoGram << '\n';
     return 0;
 }

@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 #define FOR(i,A,b) for(int i = (A); i < (b); i++)
 using namespace std;
-
 int main() {
     int t;
     cin >> t;
@@ -9,9 +8,9 @@ int main() {
         long long L, v, l, r;
         cin >> L >> v >> l >> r;
         long long lanterns = L / v; 
-        long long lanterns_in_range_r = r / v;
-        long long lanterns_in_range_l_minus_1 = (l - 1) / v; 
-        long long visible_lanterns = lanterns - (lanterns_in_range_r - lanterns_in_range_l_minus_1);
+        long long lanternsCovered = r / v;
+        long long lanterns1 = (l - 1) / v; 
+        long long visible_lanterns = lanterns - (lanternsCovered - lanterns1);
         cout << visible_lanterns << '\n';
     }
     return 0;

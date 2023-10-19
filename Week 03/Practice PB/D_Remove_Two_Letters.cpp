@@ -7,45 +7,15 @@
 //     cin >> n;
 //     string s;
 //     cin >> s;
-//     // map<string, int> mp;
-//     // vector<string> ss;
-//     set<string> ss;
-//     for (int i = 0; i < s.size()-1; i++)
+//     int cnt = n - 1;
+//     for (int i = 1; i < n-2;i++)
 //     {
-//         string s1;
-//         for (int j = 0; j < s.size(); j++)
+//         if(s[i] == s[i+1])
 //         {
-//             if(j != i && j != i+1)
-//             {
-//                 s1 += s[j];
-//             }
-//         }
-
-//         // if(ss.empty())
-//         // {
-//         //     ss.push_back(s1);
-//         // }
-//         // else
-//         // {
-//         //     bool found = false;
-//         //     for(auto k:ss)
-//         //     {
-//         //         if(k == s1)
-//         //         {
-//         //             found = true;
-//         //             break;
-//         //         }
-//         //     }
-//         //     if(!found)
-//         //         ss.push_back(s1);
-//         // }
-//         // mp[s1]++;
-//         if(ss.count(s1) == 0)
-//         {
-//             ss.insert(s1);
+//             cnt--;
 //         }
 //     }
-//     cout << ss.size() << '\n';
+//     cout << cnt << '\n';
 // }
 // int main()
 // {
@@ -58,7 +28,11 @@
     
 //     return 0;
 // }
+
+
+
 #include <bits/stdc++.h>
+#define For(i,A,B) for(int i = A; i < B; i++)
 using namespace std;
 void solve() 
 {
@@ -77,7 +51,6 @@ void solve()
     int result = n - 1 - count;
     cout << result << '\n';
 }
-
 int main() 
 {
     int t;
@@ -88,3 +61,41 @@ int main()
     }
     return 0;
 }
+
+
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// //#define int long long
+// #define endl "\n"
+// #define SSK ios_base::sync_with_stdio(0); cin.tie(0);
+
+// string rev(string a)
+// {
+//     reverse(a.begin(), a.end());
+//     return a;
+// }
+
+// signed main()
+// {
+//     SSK
+
+//     int t; cin >> t;
+//     while(t--)
+//     {
+//         int n; cin >> n;
+//         string s; cin >> s;
+//         vector<string> ans;
+//         for(int i=0; i<(n-1); i++)
+//         {
+//             string x = s.substr(i, 2);
+//             if(!i || (ans.back()!=x && rev(ans.back())!=x))
+//             ans.push_back(x);
+//         }
+//         cout << ans.size() << endl;
+//     }
+
+//     return 0;
+// }
