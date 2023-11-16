@@ -2,22 +2,20 @@
 #define For(i,A,B) for(int i = A; i < B; i++)
 #define nl '\n'
 #define ll long long
+const int MOD = 1e9 + 7;
 using namespace std;
-ll f(ll x,ll k,ll n){
-    return (x % k) * ((n - x) % k);
-}
 void solve()
 {
-    ll n, k;
-    cin >> n >> k;
-    if(k < n){
-        cout << n / 2 << nl;
-    }    
-    else{
-        ll op1 = (n % k) / 2;
-        ll op2 = (n % k + k) / 2;
-        if(f)
+    int p, r;
+    cin >> p >> r;
+    if(r == 0 || p == r || p > r){
+        cout << 0 << nl;
     }
+    else{
+        int dif = (r - p) * 2;
+        cout << dif << nl;
+    }
+
 }
 int main()
 {

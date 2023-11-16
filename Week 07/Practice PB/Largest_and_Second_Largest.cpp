@@ -2,30 +2,25 @@
 #define For(i,A,B) for(int i = A; i < B; i++)
 #define nl '\n'
 #define ll long long
+const int MOD = 1e9 + 7;
 using namespace std;
 void solve()
 {
     int n;
     cin >> n;
-    string s;
-    cin >> s;
-    int cnt = 0;
-    For(i,0,n)
-    {
-        if(s[i] == '1')
-        {
-            cnt++;
+    vector<int> v(n);
+    int mx = INT_MIN;
+    For(i,0,n){
+        cin >> v[i];
+        mx = max(mx, v[i]);
+    }
+    int smx = INT_MIN;
+    For(i,0,n){
+        if(v[i] < mx){
+            smx = max(smx, v[i]);
         }
     }
-    int zero = n - cnt;
-    if(min(cnt,zero)%2 != 0)
-    {
-        cout << "Zlatan" << nl;
-    }
-    else
-    {
-        cout << "Ramos" << nl;
-    }
+    cout << mx+smx << nl;
 }
 int main()
 {
