@@ -12,7 +12,7 @@ void solve()
         cin >> v[i];
     }
     priority_queue<int> pq;
-    int sum = 0;
+    ll sum = 0;
     for(auto i:v)
     {
         if(i > 0)
