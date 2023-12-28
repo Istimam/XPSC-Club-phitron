@@ -61,7 +61,13 @@ Node query(int node,int l,int r,int x,int y)
 }
 int main()
 {
-    string s;
+    string s,ss;
+    cin >> ss;
+    For(i,0,ss.size()){
+        if(ss[i] == '0'){
+            s
+        }
+    }
     cin >> s;
     build(1, 0, s.size() - 1, s);
     // For(i,1,16){

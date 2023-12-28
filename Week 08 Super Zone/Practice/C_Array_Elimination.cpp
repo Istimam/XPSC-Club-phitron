@@ -16,11 +16,11 @@ void solve()
         int cnt = 0;
         while (v[i] > 0)
         {
-            cnt++;
             if(cnt >= 30)break;
             if(v[i]%2 != 0){
                 bit[cnt]++;
             }
+            cnt++;
             v[i] >>= 1;
         }
     }
@@ -29,7 +29,7 @@ void solve()
     // }
     For(k,1,n+1){
         bool ok = true;
-        For(j,1,30){
+        For(j,0,30){
             if(bit[j]%k != 0){
                 ok = false;
                 break;

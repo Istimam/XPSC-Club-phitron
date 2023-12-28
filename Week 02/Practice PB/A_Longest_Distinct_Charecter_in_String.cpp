@@ -9,26 +9,16 @@ int main()
     int abc[26] = {0};
     while (j < s.size())
     {
-        abc[s[j] - 'a']++;
-        bool check = true;
-        For(k,i,j)
-        {
-            if(s[i] != 1)
+        if(abc[s[j]-'a'] == 1){
+            while (true)
             {
-                check = false;
-                break;
+                abc[s[i] - 'a'] = 0;
+                i++;
+                if(s[i-1] == s[j])break;
             }
-            i++;
         }
-        if(check)
-        {
-            int d = j - i;
-            cnt = max(cnt, d);
-        }
-        
-        abc[s[i] - 'a']--;
-        i++;
-        
+        abc[s[j] - 'a'] = 1;
+        cnt = max(cnt, j - i + 1);
         j++;
     }
     cout << cnt;
