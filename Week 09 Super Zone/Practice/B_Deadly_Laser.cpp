@@ -16,8 +16,7 @@ void solve()
     if(x-d <= 1 && x+d >= n)
         ans = false;
     if(y-d <= 1 && y+d >=m)
-        ans = false;
-    if(!ans)
+        ans = false;    if(!ans)
         cout << -1 << nl;
     else
         cout << n + m - 2 << nl;
