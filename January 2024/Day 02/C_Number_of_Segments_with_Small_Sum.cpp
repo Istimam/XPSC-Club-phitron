@@ -8,9 +8,11 @@ int main()
 {
     ll n, s;
     cin >> n >> s;
-    vector<ll> v(n);
-    For(i, 0, n) cin >> v[i];
-    ll i = 0, j = 0, sum = 0, ans = 0;
+    vector<int> v(n);
+    For(i, 0, n){
+        cin >> v[i];
+    }
+    ll j = 0, i = 0, sum = 0, cnt = 0;
     while (j<n)
     {
         sum += v[j];
@@ -19,11 +21,9 @@ int main()
             sum -= v[i];
             i++;
         }
-        if(sum <= s){
-            ans = max(ans, j - i + 1);
-        }
+        cnt += j - i + 1;
         j++;
     }
-    cout << ans << NL;
+    cout << cnt << NL;
     return 0;
 }
